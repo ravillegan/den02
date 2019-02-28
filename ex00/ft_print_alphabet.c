@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
+
 void	ft_putchar(char i)
 {
 	write(1, &i, 1);
@@ -25,4 +27,11 @@ void	ft_print_alphabet(void)
 		ft_putchar(i);
 		i = i + 1;
 	}
+	ft_putchar('\n');
+}
+
+int	main()
+{
+	ft_print_alphabet();
+	return (0);
 }
